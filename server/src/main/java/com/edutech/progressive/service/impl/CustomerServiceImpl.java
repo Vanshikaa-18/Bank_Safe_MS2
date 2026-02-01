@@ -29,7 +29,10 @@ public class CustomerServiceImpl implements CustomerService  {
     public int addCustomer(Customers customers) throws SQLException {
         // TODO Auto-generated method stub
         // return -1;
-        return customerDAO.addCustomer(customers);
+        // return customerDAO.addCustomer(customers);
+        int generatedId = customerDAO.addCustomer(customers);
+        customers.setCustomerId(generatedId);
+        return generatedId;
     }
 
     @Override

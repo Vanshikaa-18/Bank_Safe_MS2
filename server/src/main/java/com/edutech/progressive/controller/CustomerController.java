@@ -3,6 +3,7 @@ package com.edutech.progressive.controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import com.edutech.progressive.entity.Customers;
@@ -63,7 +64,8 @@ public class CustomerController {
         return arraylistService.getAllCustomersSortedByName();
     }
 
-    @PostMapping("/fromArrayList")
+    @PostMapping("/toArrayList")
+    @ResponseStatus(HttpStatus.CREATED)
     public int addCustomerToArrayList(@RequestBody Customers customers) throws SQLException {
         return arraylistService.addCustomer(customers);
     }

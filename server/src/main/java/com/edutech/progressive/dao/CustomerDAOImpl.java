@@ -37,6 +37,7 @@ public class CustomerDAOImpl implements CustomerDAO{
         if(rs.next()){
             return rs.getInt(1);
         }
+        
         return -1;   
         
     }

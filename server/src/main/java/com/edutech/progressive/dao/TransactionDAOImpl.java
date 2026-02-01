@@ -38,7 +38,9 @@ public class TransactionDAOImpl implements TransactionDAO {
 
         ResultSet rs = ps.getGeneratedKeys();
         if(rs.next()){
-            return rs.getInt(1);
+            int id= rs.getInt(1);
+            transaction.setTransactionId(id);
+            return id;
         }
         return -1;
            
