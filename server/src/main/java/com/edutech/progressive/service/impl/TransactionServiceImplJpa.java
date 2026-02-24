@@ -56,11 +56,16 @@ import com.edutech.progressive.service.TransactionService;
 @Service
 public class TransactionServiceImplJpa implements TransactionService {
 
-    private final TransactionRepository transactionRepo;
+    private TransactionRepository transactionRepo;
 
     public TransactionServiceImplJpa(TransactionRepository transactionRepo) {
         this.transactionRepo = transactionRepo;
     }
+    
+
+    public TransactionServiceImplJpa() {
+    }
+
 
     @Override
     public List<Transactions> getAllTransactions() throws SQLException {

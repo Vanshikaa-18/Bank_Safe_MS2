@@ -59,11 +59,16 @@ import com.edutech.progressive.service.AccountService;
 @Service
 public class AccountServiceImplJpa implements AccountService {
 
-    private final AccountRepository accRepo;
+    private AccountRepository accRepo;
 
     public AccountServiceImplJpa(AccountRepository accRepo) {
         this.accRepo = accRepo;
     }
+    
+
+    public AccountServiceImplJpa() {
+    }
+
 
     @Override
     public List<Accounts> getAllAccounts() throws SQLException {

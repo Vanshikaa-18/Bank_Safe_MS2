@@ -16,6 +16,11 @@ public class CustomerServiceImpl implements CustomerService  {
     public CustomerServiceImpl(CustomerDAOImpl customerDAO){
          this.customerDAO = customerDAO;
     }
+    
+
+    public CustomerServiceImpl() {
+    }
+
 
     @Override
     public List<Customers> getAllCustomers() throws SQLException {

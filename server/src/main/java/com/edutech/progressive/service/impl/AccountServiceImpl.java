@@ -15,6 +15,10 @@ public class AccountServiceImpl implements AccountService  {
     public AccountServiceImpl(AccountDAO accountDAO){
         this.accountDAO = accountDAO;
     }
+    
+    public AccountServiceImpl() {
+    }
+
     @Override
     public List<Accounts> getAllAccounts() throws SQLException {
         // TODO Auto-generated method stub

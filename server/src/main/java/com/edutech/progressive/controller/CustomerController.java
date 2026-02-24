@@ -14,16 +14,21 @@ import com.edutech.progressive.service.impl.CustomerServiceImplJpa;
 @RequestMapping("/customers")
 public class CustomerController {
 
-    private final CustomerServiceImplArraylist arraylistService;
-    private final CustomerServiceImplJpa jpaService;
+    private  CustomerServiceImplArraylist arraylistService;
+    private  CustomerServiceImplJpa jpaService;
 
     public CustomerController(CustomerServiceImplArraylist arraylistService,
                               CustomerServiceImplJpa jpaService) {
         this.arraylistService = arraylistService;
         this.jpaService = jpaService;
     }
+    
 
     // ---------- JPA ----------
+
+    public CustomerController() {
+    }
+
 
     @GetMapping
     public List<Customers> getAllCustomers() throws SQLException {
